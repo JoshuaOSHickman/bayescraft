@@ -18,5 +18,11 @@ test:
   database: bayescraft_test
 
 production:
-  <<: *common
-  database: bayescraft_production
+  adapter: postgresql
+  host: ec2-107-22-170-215.compute-1.amazonaws.com
+  database: dcld7ae700kiml
+  username: fqjmpvidhtemvk
+  port: 5432
+  password: M_IE7kIm7ILFprG8pt7OGnRebi
+  pool: 5
+  timeout: 5000
