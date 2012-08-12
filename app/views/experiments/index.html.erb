@@ -1,0 +1,22 @@
+<table class="table table-striped table-bordered">
+	<thead>
+		<tr>
+			<td>Experiment Name</td>
+			<td># of Trials</td>
+			<td>Status</td>
+			<td></td>
+		</tr>
+	</thead>
+	<tbody>
+		<% @experiments.each do |e| %>
+			<tr>
+				<td><%= e.name %></td>
+				<td><%= e.trials.count %></td>
+				<td><%= e.status %></td>
+				<td><a class="btn btn-primary run-trials" href="<%= experiment_url(e) %>">Participate</button></td>
+			</tr>
+		<% end %>
+	</tbody>
+</table>
+
+<a href="<%= new_experiment_url %>">Start a new experiment!</a>

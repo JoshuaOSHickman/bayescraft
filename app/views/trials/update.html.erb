@@ -1,0 +1,10 @@
+<p>You successfully ran a trial!</p>
+<p class="also">
+	<% if @trial.outcome_good? %>
+		<p> You even got that excellent outcome! </p>
+	<% else %>
+		<p> Which moves us closer to knowledge! </p>
+	<% end %>
+</p>
+<a class="continue btn" href="<%= experiment_url @trial.experiment_id %>">Continue With This Experiment</a>
+<a class="return btn btn-inverse" href="<%= experiments_url %>">Return to Experiment List</a>

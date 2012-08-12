@@ -1,0 +1,13 @@
+== TODO
+
+Nice chrome matching appointment reminder. 
+
+Guided use of the website/ video
+
+For pay using stripe.
+
+CanCan to set up the following:
+  Can add trial (everyone?)
+  Can add experiment
+  Can share experiment data with others/ get certified reports of the data.
+  Can have private experiment

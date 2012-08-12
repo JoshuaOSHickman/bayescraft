@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  experiment_id: 
+  should_do_action1: false
+  outcome_good: false
+
+two:
+  experiment_id: 
+  should_do_action1: false
+  outcome_good: false

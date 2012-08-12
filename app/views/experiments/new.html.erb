@@ -1,0 +1,11 @@
+<div class="new-experiment">
+	<h2>Make a New Experiment</h2>
+	<%= form_for :experiments, :url => experiments_url do |f| %>
+  		<%= f.text_field :name, :placeholder => "Experiment Name" %>
+	  	<%= f.text_field :action1, :placeholder => "Your Current, Default Behavior" %>
+	  	<%= f.text_field :action2, :placeholder => "New Behavior" %>
+	  	<%= f.text_field :outcome, :placeholder => "Desired Result" %>
+
+	  	<%= f.submit "Start Testing!", :class => "btn btn-primary done" %>
+	<% end %>
+</div>
