@@ -35,3 +35,6 @@ Bayescraft::Application.configure do
   # Expands the lines which load the assets
   config.assets.debug = true
 end
+
+Stripe.api_key = "sYCuDiuTuERHqmVT1D5C7QxRO53JaEt4"
+STRIPE_PUBLIC_KEY = "pk_1p9PDHdREElFIUPhQRKYQo5Cw5T0M"

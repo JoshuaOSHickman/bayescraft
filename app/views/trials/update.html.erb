@@ -7,4 +7,7 @@
 	<% end %>
 </p>
 <a class="continue btn" href="<%= experiment_url @trial.experiment_id %>">Continue With This Experiment</a>
-<a class="return btn btn-inverse" href="<%= experiments_url %>">Return to Experiment List</a>
+<a class="return btn btn-inverse" 
+	 href="<%= @trial.experiment.user_id.nil? ? experiments_url : user_url(@trial.experiment.user_id) %>">
+	Return to Experiment List
+</a>

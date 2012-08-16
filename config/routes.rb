@@ -18,6 +18,13 @@ Bayescraft::Application.routes.draw do
     end
   end
 
+  resources :pricing
+  resources :subscriptions
+  resources :sessions
+  resources :user
+  match '/login' => "sessions#new"
+  match '/logout' => "sessions#destroy"
+
   # Sample resource route with options:
   #   resources :products do
   #     member do

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120812165317) do
+ActiveRecord::Schema.define(:version => 20120816010750) do
 
   create_table "experiments", :force => true do |t|
     t.string   "name"
@@ -20,7 +20,24 @@ ActiveRecord::Schema.define(:version => 20120812165317) do
     t.string   "outcome"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.integer  "user_id"
   end
+
+  create_table "pricings", :force => true do |t|
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "subscriptions", :force => true do |t|
+    t.integer  "user_id"
+    t.string   "stripe_card_token"
+    t.datetime "created_at",            :null => false
+    t.datetime "updated_at",            :null => false
+    t.string   "stripe_customer_token"
+    t.string   "email"
+  end
+
+  add_index "subscriptions", ["email"], :name => "index_subscriptions_on_email", :unique => true
 
   create_table "trials", :force => true do |t|
     t.integer  "experiment_id"
@@ -29,6 +46,13 @@ ActiveRecord::Schema.define(:version => 20120812165317) do
     t.datetime "created_at",                           :null => false
     t.datetime "updated_at",                           :null => false
     t.boolean  "borked",            :default => false, :null => false
+  end
+
+  create_table "users", :force => true do |t|
+    t.integer  "subscription_id"
+    t.string   "password_digest"
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
   end
 
 end

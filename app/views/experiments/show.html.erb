@@ -1,6 +1,8 @@
-<a class="return" href="<%= experiments_url %>">return to experiments list</a>
- <h2>Participate in this experiment (Trial #<%= @experiment.trials.size %>)</h2>
- <p><%= @trial.should_do_action1 ? @experiment.action1 : @experiment.action2 %></p>
- <a class="btn btn-success did-it" href="<%= edit_trial_url %>">I Did It</a>
- <a class="did-wrong-thing btn btn-danger btn-mini" href="<%= bork_trial_url %>">I did the wrong thing</a>    
+<a class="return" href="<%= @experiment.user_id.nil? ? experiments_url : user_url(@experiment.user_id) %>">
+	return to experiments list
+</a>
+<h2>Participate in this experiment (Trial #<%= @experiment.trials.size %>)</h2>
+<p><%= @trial.should_do_action1 ? @experiment.action1 : @experiment.action2 %></p>
+<a class="btn btn-success did-it" href="<%= edit_trial_url %>">I Did It</a>
+<a class="did-wrong-thing btn btn-danger btn-mini" href="<%= bork_trial_url %>">I did the wrong thing</a>    
     

@@ -19,4 +19,6 @@
 	</tbody>
 </table>
 
-<a class="btn btn-primary" href="<%= new_experiment_url %>">Start Your Own Experiment Now!</a>
+<a class="btn btn-primary" href="<%= new_experiment_url(:params => {:private => true}) %>">
+	Start <%= if @experiments.empty? then "Your First" else "a" end %> Private Experiment Now!
+</a>

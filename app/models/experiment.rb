@@ -1,5 +1,5 @@
 class Experiment < ActiveRecord::Base
-  attr_accessible :action1, :action2, :name, :outcome
+  attr_accessible :action1, :action2, :name, :outcome, :user_id
   has_many :trials
 
   def status

@@ -7,6 +7,7 @@ gem 'rails', '3.2.8'
 
 gem 'pg'
 
+gem 'stripe'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -27,7 +28,7 @@ gem 'jquery-rails'
 
 
 # To use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
+gem 'bcrypt-ruby', '~> 3.0.0'
 
 # To use Jbuilder templates for JSON
 # gem 'jbuilder'

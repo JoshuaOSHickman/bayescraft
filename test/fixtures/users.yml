@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  subscription_id: 1
+  password_digest: MyString
+
+two:
+  subscription_id: 1
+  password_digest: MyString

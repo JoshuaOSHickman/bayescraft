@@ -35,3 +35,6 @@ Bayescraft::Application.configure do
   # Print deprecation notices to the stderr
   config.active_support.deprecation = :stderr
 end
+
+Stripe.api_key = "sYCuDiuTuERHqmVT1D5C7QxRO53JaEt4"
+STRIPE_PUBLIC_KEY = "pk_1p9PDHdREElFIUPhQRKYQo5Cw5T0M"
