@@ -6,6 +6,7 @@ class ExperimentsController < ApplicationController
   def show
   	@experiment = Experiment.find(params[:id])
     redirect_to login_url unless @experiment.user_id.nil? || current_user.id == @experiment.user_id
+    # if there is a user and an unfinished trial, give that, or a new trial
   	@trial = (!@experiment.user_id.nil? && @experiment.trials.where(:outcome_good => nil).first) || Trial.new do |t|
       t.experiment_id = params[:id]
       t.should_do_action1 = [true, false].sample
