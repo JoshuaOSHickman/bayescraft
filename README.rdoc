@@ -1,13 +1,21 @@
 == TODO
 
-Nice chrome matching appointment reminder. 
+=important/features
+free trial link
+session ids so people not logged in have unique trials
+"tell me when plan is available" links working
 
-Guided use of the website/ video
+=important/design
+experiment show list should have a banner saying "Results are In!" when you make a new trial
+little arrows on conversion buttons (patio11 says good)
 
-For pay using stripe.
+=less important/features
+disable paid accounts if billing fails
+recommended experiments on the for-pay empty experiments page (on that page, have button for "how to recommend an experiment you've done" or something to show we're not sharing private data). 
+queue up other actions for a best-of-breed competition
+more than one outcome you measure for the experiment (an experiment can have this or the above but not both? or would we do a ThisOutcomeBreaksTies in the last one, next if both tie way to progress in the best of breed)
 
-CanCan to set up the following:
-  Can add trial (everyone?)
-  Can add experiment
-  Can share experiment data with others/ get certified reports of the data.
-  Can have private experiment
+=less important/design
+Nice chrome matching appointment reminder &c. 
+Guided use of the website/ video (less important because free version exists)
+
