@@ -8,6 +8,7 @@ disable account
 =important/design
 experiment show list should have a banner saying "Results are In!" when you make a new trial
 little arrows on conversion buttons (patio11 says good)
+hero unit on / and /experiments about what bayescraft is and does
 
 =less important/features
 disable paid accounts if billing fails
