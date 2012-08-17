@@ -19,3 +19,6 @@ more than one outcome you measure for the experiment (an experiment can have thi
 Nice chrome matching appointment reminder &c. 
 Guided use of the website/ video (less important because free version exists)
 
+
+=notes
+show errors about billing/ on subscription save
