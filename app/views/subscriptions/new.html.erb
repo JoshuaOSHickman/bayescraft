@@ -13,6 +13,7 @@
   <% end %>
 
   <%= f.hidden_field :stripe_card_token %>
+  <%= f.hidden_field :trial, :value => !!@trial %>
 
   <div class="field">
     <%= f.label :email %>
