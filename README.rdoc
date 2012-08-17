@@ -3,6 +3,7 @@
 =important/features
 session ids so people not logged in have unique trials
 "tell me when plan is available" links working
+disable account
 
 =important/design
 experiment show list should have a banner saying "Results are In!" when you make a new trial
