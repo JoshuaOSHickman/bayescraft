@@ -10,6 +10,14 @@ class Experiment < ActiveRecord::Base
     end
   end
 
+  def private?
+    !!user_id
+  end
+
+  def public?
+    !private?
+  end
+
   def status
   	trials1 = trials.select {|t| t.should_do_action1? && !t.borked? }
   	trials2 = trials.select {|t| !t.should_do_action1? && !t.borked? }

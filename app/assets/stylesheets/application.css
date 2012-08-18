@@ -13,3 +13,4 @@
  */
 
 .check { height: 48px; }
+button.btn.delete-button { margin-bottom: 0; line-height: 9px; }

@@ -5,7 +5,7 @@
   <!--[if lt IE 9]>
 	<script src="https://html5shim.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
-  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= stylesheet_link_tag "application", :media => "all" %>
   <%= csrf_meta_tags %>
   <%= javascript_include_tag "https://js.stripe.com/v1/", "application" %>
   <%= tag :meta, :name => "stripe-key", :content => STRIPE_PUBLIC_KEY %>
@@ -26,7 +26,8 @@
 								<a href="<%= pricing_index_url %>"> Pricing </a>
 							</li>
 						<% else %>
-							<li class="<% if controller_name == "user" %>active<% end %>"> 
+							<li class="<% if controller_name == "user" || 
+										(controller_name == "experiments" && @experiment.private?) %>active<% end %>"> 
 								<a href="<%= user_url(current_user.id) %>"> Your Experiments </a>
 							</li>
 							<li class="<% if controller_name == "experiments" %>active<% end %>"> 
@@ -42,7 +43,7 @@
 							<li>
 								<%= button_to "Delete Account", { :action => "destroy", :id => current_user.id, :controller => "user"},
           				:confirm => "Are you sure? You'll lose all your private data.", 
-          				:method => :delete, :class => "delete-button " %>
+          				:method => :delete, :class => "label label-inverse" %>
 							</li>
 							<li class="<% if controller_name == "sessions" %>active<% end %>">
 								<a href="<%= logout_url %>">Log Out</a>
