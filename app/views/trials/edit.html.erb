@@ -5,4 +5,3 @@
 <%= button_to "#{@trial.outcome} Didn't Happen", 
 	{:action => "update", :id => @trial.id, :controller => "trials", :params => {:outcome_good => false}},
   :method => :put, :class => "finished-with-outcome btn btn-inverse" %>
-<%= @trial.inspect %>
