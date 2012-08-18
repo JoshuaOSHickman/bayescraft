@@ -39,6 +39,11 @@
 					</ul>
 					<ul class="nav pull-right">
 						<% if current_user %>
+							<li>
+								<%= button_to "Delete Account", { :action => "destroy", :id => current_user.id, :controller => "user"},
+          				:confirm => "Are you sure? You'll lose all your private data.", 
+          				:method => :delete, :class => "delete-button " %>
+							</li>
 							<li class="<% if controller_name == "sessions" %>active<% end %>">
 								<a href="<%= logout_url %>">Log Out</a>
 							</li>

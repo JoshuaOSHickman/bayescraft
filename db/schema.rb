@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120817010637) do
+ActiveRecord::Schema.define(:version => 20120817013654) do
 
   create_table "experiments", :force => true do |t|
     t.string   "name"
@@ -31,6 +31,8 @@ ActiveRecord::Schema.define(:version => 20120817010637) do
     t.string   "stripe_customer_token"
     t.string   "email"
     t.boolean  "trial",                 :default => false, :null => false
+    t.string   "customer_id"
+    t.boolean  "disabled",              :default => false, :null => false
   end
 
   add_index "subscriptions", ["email"], :name => "index_subscriptions_on_email", :unique => true

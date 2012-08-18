@@ -1,18 +1,23 @@
 class ExperimentsController < ApplicationController
  	def index
-		@experiments = Experiment.first(5)
+		@experiments = Experiment.where(:user_id => nil).first(5)
   end
 
   def show
   	@experiment = Experiment.find(params[:id])
-    redirect_to login_url unless @experiment.user_id.nil? || current_user.id == @experiment.user_id
+    redirect_to login_url unless @experiment.user_id.nil? || (current_user && current_user.id == @experiment.user_id)
     # if there is a user and an unfinished trial, give that, or a new trial
-  	@trial = (!@experiment.user_id.nil? && @experiment.trials.where(:outcome_good => nil).first) || Trial.new do |t|
-      t.experiment_id = params[:id]
-      t.should_do_action1 = [true, false].sample
-      t.save!
+    if @experiment.user_id.nil?
+      @trial = @experiment.new_trial
+      @private = false
+    else
+      if existing_trial = @experiment.trials.where(:outcome_good => nil).first
+        @trial = existing_trial
+      else
+        @trial = @experiment.new_trial
+      end
+      @private = true
     end
-    @private = !@experiment.user_id.nil?
   end
 
   def new

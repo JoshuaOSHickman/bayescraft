@@ -5,7 +5,7 @@ class TrialsController < ApplicationController
 
 	def update
 		instance do |trial|
-			trial.outcome_good = params[:outcome_good]
+			trial.outcome_good = params[:outcome_good] == "true"
 			trial.save!
 		end
 	end

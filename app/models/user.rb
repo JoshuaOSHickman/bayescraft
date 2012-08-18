@@ -5,4 +5,5 @@ class User < ActiveRecord::Base
   validates_presence_of :password, :on => :create
 
   has_many :experiments
+  belongs_to :subscription
 end

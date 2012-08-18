@@ -1,9 +1,8 @@
 <p>Did <%= @trial.outcome %> occur?</p>
-<%= form_for @trial do |f|
-	f.hidden_field :outcome_good, :value => true
-	f.submit "#{@trial.outcome} Happened", :class => "finished-with-outcome btn btn-primary"
-end %>
-<%= form_for @trial do |f|
-	f.hidden_field :outcome_good, :value => false
-	f.submit "#{@trial.outcome} Didn't Happen", :class => "finished-with-outcome btn btn-inverse"
-end %>
+<%= button_to "#{@trial.outcome} Happened", 
+	{:action => "update", :id => @trial.id, :controller => "trials", :params => {:outcome_good => true}},
+  :method => :put, :class => "finished-with-outcome btn btn-primary" %>
+<%= button_to "#{@trial.outcome} Didn't Happen", 
+	{:action => "update", :id => @trial.id, :controller => "trials", :params => {:outcome_good => false}},
+  :method => :put, :class => "finished-with-outcome btn btn-inverse" %>
+<%= @trial.inspect %>
