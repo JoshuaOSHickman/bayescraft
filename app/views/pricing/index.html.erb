@@ -75,3 +75,6 @@
 	</tbody>
 </table>
 <a href="<%= new_subscription_url(:params => {:trial => true}) %>">Start Your 14-Day Free Trial Now!</a>
+<% unless Rails.env.production? %>
+	<p>Don't worry, this is fake payment processing</p>
+<% end %>
