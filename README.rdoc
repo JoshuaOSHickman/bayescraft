@@ -1,25 +1,23 @@
 == TODO
 
+=in NEXT (v4.0.0)
+"tell me when plan is available" links working
+experiment show list should have a banner saying "Results are In!" when you make a new trial
+hero unit on / and /experiments about what bayescraft is and does
+disable paid accounts if billing fails
+
 =important/features
 session ids so people not logged in have unique trials
-"tell me when plan is available" links working
-disable account
-
-=important/design
-experiment show list should have a banner saying "Results are In!" when you make a new trial
-little arrows on conversion buttons (patio11 says good)
-hero unit on / and /experiments about what bayescraft is and does
-
-=less important/features
-disable paid accounts if billing fails
-recommended experiments on the for-pay empty experiments page (on that page, have button for "how to recommend an experiment you've done" or something to show we're not sharing private data). 
 queue up other actions for a best-of-breed competition
 more than one outcome you measure for the experiment (an experiment can have this or the above but not both? or would we do a ThisOutcomeBreaksTies in the last one, next if both tie way to progress in the best of breed)
 
+=important/design
+little arrows on conversion buttons (patio11 says good [ab test arrow for triangle])
+Guided use of the website/ video (less important because free version exists)
+show errors about billing/ on subscription save
+
+=less important/features
+recommended experiments on the for-pay empty experiments page (on that page, have button for "how to recommend an experiment you've done" or something to show we're not sharing private data). 
+
 =less important/design
 Nice chrome matching appointment reminder &c. 
-Guided use of the website/ video (less important because free version exists)
-
-
-=notes
-show errors about billing/ on subscription save
