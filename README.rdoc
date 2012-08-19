@@ -4,7 +4,6 @@
 "tell me when plan is available" links working
 experiment show list should have a banner saying "Results are In!" when you make a new trial
 hero unit on / and /experiments about what bayescraft is and does
-disable paid accounts if billing fails
 
 =important/features
 session ids so people not logged in have unique trials
@@ -18,6 +17,7 @@ show errors about billing/ on subscription save
 
 =less important/features
 recommended experiments on the for-pay empty experiments page (on that page, have button for "how to recommend an experiment you've done" or something to show we're not sharing private data). 
+disable paid accounts if billing fails (this will take more than two weeks, stripe will cancel the subscription, setup webhook to disable on our end)
 
 =less important/design
 Nice chrome matching appointment reminder &c. 
