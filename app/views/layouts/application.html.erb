@@ -27,7 +27,7 @@
 							</li>
 						<% else %>
 							<li class="<% if controller_name == "user" || 
-										(controller_name == "experiments" && @experiment.private?) %>active<% end %>"> 
+										(controller_name == "experiments" && @private) %>active<% end %>"> 
 								<a href="<%= user_url(current_user.id) %>"> Your Experiments </a>
 							</li>
 							<li class="<% if controller_name == "experiments" %>active<% end %>"> 
@@ -40,10 +40,9 @@
 					</ul>
 					<ul class="nav pull-right">
 						<% if current_user %>
-							<li>
-								<%= button_to "Delete Account", { :action => "destroy", :id => current_user.id, :controller => "user"},
-          				:confirm => "Are you sure? You'll lose all your private data.", 
-          				:method => :delete, :class => "label label-inverse" %>
+							<li class="dropdown">
+								<a class="dropdown-toggle" data-toggle="dropdown">Manage Your Account</a>
+								<ul class="dropdown-menu"><li><a href="<%= edit_subscription_url(current_user.subscription) %>">Cancel Your Subscription</a></li></ul>
 							</li>
 							<li class="<% if controller_name == "sessions" %>active<% end %>">
 								<a href="<%= logout_url %>">Log Out</a>

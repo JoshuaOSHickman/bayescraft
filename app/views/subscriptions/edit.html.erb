@@ -1,0 +1,3 @@
+<%= button_to "Delete Account", { :action => "destroy", :id => current_user.id, :controller => "user"},
+			:confirm => "Are you sure? You'll lose all your private data.", 
+			:method => :delete, :class => "label label-inverse" %>

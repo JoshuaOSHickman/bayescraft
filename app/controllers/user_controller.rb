@@ -10,6 +10,6 @@ class UserController < ApplicationController
 	def destroy
 		redirect_to login_url if session[:user_id].to_i != params[:id].to_i || instance.subscription.disabled?
 		instance.subscription.cancel
-		redirect_to root_url
+		redirect_to logout_url
 	end
 end

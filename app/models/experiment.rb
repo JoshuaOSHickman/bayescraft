@@ -18,7 +18,7 @@ class Experiment < ActiveRecord::Base
     !private?
   end
 
-  def status
+  def status # todo switch to '.where().count' (should need 6 of them)
   	trials1 = trials.select {|t| t.should_do_action1? && !t.borked? }
   	trials2 = trials.select {|t| !t.should_do_action1? && !t.borked? }
 

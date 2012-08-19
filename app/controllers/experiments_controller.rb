@@ -1,6 +1,7 @@
 class ExperimentsController < ApplicationController
  	def index
 		@experiments = Experiment.where(:user_id => nil).first(5)
+    @private = false
   end
 
   def show
@@ -21,6 +22,7 @@ class ExperimentsController < ApplicationController
   end
 
   def new
+    @private = params[:private]
   end
 
   def create
