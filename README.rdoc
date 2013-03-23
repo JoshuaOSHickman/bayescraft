@@ -4,8 +4,12 @@
 "tell me when plan is available" links working
 experiment show list should have a banner saying "Results are In!" when you make a new trial
 hero unit on / and /experiments about what bayescraft is and does
+Yates' continuity correction
+
+Unit Tests
 
 =important/features
+disable experiments when done
 session ids so people not logged in have unique trials
 queue up other actions for a best-of-breed competition
 more than one outcome you measure for the experiment (an experiment can have this or the above but not both? or would we do a ThisOutcomeBreaksTies in the last one, next if both tie way to progress in the best of breed)
@@ -21,3 +25,8 @@ disable paid accounts if billing fails (this will take more than two weeks, stri
 
 =less important/design
 Nice chrome matching appointment reminder &c. 
+
+
+=== ideas
+longitudinal experiments -- you are 1 trial, you log "I did the wrong thing", "Outcome!", "No outcome!" every {unit of time} -- have calendar access for back in time data
+gamification/ merge with N-oGoingBack
